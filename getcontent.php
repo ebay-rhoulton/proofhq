@@ -74,7 +74,7 @@ if(isset($_GET['just_mobile'])){
 }else{
 	
 ?>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
    <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
    <tr><td>
    <table align="center" width="1000" border="0" cellspacing="0" cellpadding="0">
