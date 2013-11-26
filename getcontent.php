@@ -73,6 +73,7 @@ if(isset($_GET['just_mobile'])){
 	
 
 }else{
+	
 ?>
 
    <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
