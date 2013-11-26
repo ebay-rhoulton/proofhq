@@ -1,4 +1,3 @@
-<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors','1');
