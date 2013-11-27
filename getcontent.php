@@ -116,9 +116,8 @@ if(isset($_GET['just_mobile'])){
 </script>
 <style>
 .clear{clear: both;}
-#top{height:100px; z-index:99; margin-top:20px;}
-#top{height:100px; z-index:99; margin-top:20px;}
-#phone_body{ margin-top: 45px; background-image:url(images/iphone5_resize_05.png); background-repeat:repeat-y; background-position:center;}
+#top{height:100px; z-index:1; margin-top:20px;}
+#phone_body{ margin-top: 45px; background-image:url(images/iphone5_resize_05.png); background-repeat:repeat-y; background-position:center; z-index:0}
 </style>
 
 <div id="top"><img src="images/iphone5_resize_03.png"/></div>
