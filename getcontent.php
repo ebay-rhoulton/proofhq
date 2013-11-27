@@ -56,10 +56,6 @@ imap_close($mbox);
 if(isset($_GET['just_mobile'])){
 	
 	//strip media query then echo
-	//$body;
-	$pattern = '~@media screen and \(max-device-width: [\d]+px\) {~';
-	$pattern2 = '~}[\n\r]+<\/style>~';
-	$replacement = '';
 	$patterns = array();
 	$patterns[0] = '~@media screen and \(max-device-width: [\d]+px\) {~';
 	$patterns[1] = '~}[\n\r]+</style>~';
@@ -67,8 +63,7 @@ if(isset($_GET['just_mobile'])){
 	$replacements[0] = '';
 	$replacements[1] = '</style>';
    	echo preg_replace($patterns, $replacements, $body);
-	//$body = preg_replace($pattern, $replacement, $body);
-	//echo preg_replace($pattern2, '</style>', $body);
+
 	
 
 }else{
@@ -125,7 +120,7 @@ if(isset($_GET['just_mobile'])){
 <div class="clear"></div>
 
 <div id="phone_body">
-<iframe scrolling="" src="http://ec2-54-229-74-229.eu-west-1.compute.amazonaws.com/git_test/getcontent.php?message_num=<?php echo $mail_value?>&mobile_flag=n&just_mobile=y" width="383px" height="100%" id="mob_version" marginheight="0" frameborder="0" ></iframe>
+<iframe scrolling="" src="http://ec2-54-229-74-229.eu-west-1.compute.amazonaws.com/proofhq/getcontent.php?message_num=<?php echo $mail_value?>&mobile_flag=n&just_mobile=y" width="383px" height="100%" id="mob_version" marginheight="0" frameborder="0" ></iframe>
 </div>
 </div>
 
