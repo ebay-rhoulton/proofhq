@@ -58,10 +58,12 @@ if(isset($_GET['just_mobile'])){
 	//strip media query then echo
 	$patterns = array();
 	$patterns[0] = '~@media screen and \(max-device-width: [\d]+px\) {~';
-	$patterns[1] = '~}[\n\r]+</style>~';
+	$patterns[1] = '~@media screen and \(max-width: [\d]+px\) {~';
+	$patterns[2] = '~}[\n\r]+</style>~';
 	$replacements = array();
 	$replacements[0] = '';
-	$replacements[1] = '</style>';
+	$replacements[1] = '';
+	$replacements[2] = '</style>';
    	echo preg_replace($patterns, $replacements, $body);
 
 	
