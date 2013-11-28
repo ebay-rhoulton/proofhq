@@ -38,7 +38,7 @@ imap_alerts();
 	//echo $subject;
 
    //If its a text version then treat it differently
-   if(mb_strpos($subject_line, "proof|H]",0,mb_detect_encoding($subject_line))){
+   if(mb_strpos(substr($subject_line, 0,15), "proof|H]",0,'UTF-8')){
 		$text_flag = 'n';
 		$body = imap_qprint(imap_body($mbox, $mail_value));
       //get and print the body
@@ -79,7 +79,7 @@ if(isset($_GET['just_mobile'])){
 		<td style="padding: 5px; font-family: Arial, sans-serif; font-size: 17px; line-height: 20px; color: #fff; background-color: #0064d2; text-decoration: none; border: #0064d2; border-style: solid; border-width: 2px;"><strong>Subject line</strong></td>
 	</tr>
 	<tr>
-		<td style="font-family: Arial, sans-serif; font-size: 17px; line-height: 20px; color: #0064d2; text-decoration: none; border: #0064d2; border-style: solid; border-width: 2px; padding: 5px;"><?php echo $subject . '  ' . mb_detect_encoding($subject_line); ?></td></tr></table>
+		<td style="font-family: Arial, sans-serif; font-size: 17px; line-height: 20px; color: #0064d2; text-decoration: none; border: #0064d2; border-style: solid; border-width: 2px; padding: 5px;"><?php echo $subject; ?></td></tr></table>
         
         <?php 
 		echo $body; 
