@@ -124,7 +124,7 @@ if(isset($_GET['just_mobile'])){
 
 <div id="top"><img src="images/iphone_frame_top.png"/></div>
 <div id="phone_body">
-<iframe scrolling="" src="http://ec2-54-229-74-229.eu-west-1.compute.amazonaws.com/proofhq/getcontent.php?message_num=<?php $mail_value ?>&mobile_flag=n&just_mobile=y" width="383px" height="2339" id="mob_version" marginheight="0" frameborder="0" ></iframe>
+<iframe scrolling="" src="http://ec2-54-229-74-229.eu-west-1.compute.amazonaws.com/proofhq/getcontent.php?message_num=<?php echo $mail_value; ?>&mobile_flag=n&just_mobile=y" width="383px" height="2339" id="mob_version" marginheight="0" frameborder="0" ></iframe>
 </div>
 <div id="bottom"><img src="images/iphone_frame_bottom.png"/></div>
 </div>
