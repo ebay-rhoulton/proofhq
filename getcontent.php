@@ -46,8 +46,8 @@ imap_alerts();
    }else{
 		
 	   $text_flag = 'y';	
-      //echo '<pre>' . imap_qprint(imap_body($mbox, $mail_value)) . '</pre>';
-      $body = nl2br(imap_qprint(imap_body($mbox, $mail_value)));
+      $body  '<pre>' . imap_qprint(imap_body($mbox, $mail_value)) . '</pre>';
+      //$body = nl2br(imap_qprint(imap_body($mbox, $mail_value)));
    }
    
    //close connection
