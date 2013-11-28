@@ -70,7 +70,7 @@ if(isset($_GET['just_mobile'])){
 	
 ?>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
-   <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:5px;">
+   <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:5px;" bgcolor="#FFFFFF">
    <tr><td>
    <table align="center" width="1000" border="0" cellspacing="0" cellpadding="0">
 	<tr>
@@ -86,7 +86,7 @@ if(isset($_GET['just_mobile'])){
         
       <!--Only use for mobile-->
       
-      <table align="center" width="1000" border="0" cellspacing="0" cellpadding="0">
+      <table align="center" width="1000" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
 	<tr>
 		<td style="padding: 5px; font-family: Arial, sans-serif; font-size: 17px; line-height: 20px; color: #fff; background-color: #0064d2; text-decoration: none; border: #0064d2; border-style: solid; border-width: 2px;"><strong>Mobile Version</strong></td>
 	</tr></table>
@@ -124,7 +124,7 @@ if(isset($_GET['just_mobile'])){
 
 <div id="top"><img src="images/iphone_frame_top.png"/></div>
 <div id="phone_body">
-<iframe scrolling="" src="http://ec2-54-229-74-229.eu-west-1.compute.amazonaws.com/git_test/getcontent.php?message_num=18&mobile_flag=n&just_mobile=y" width="383px" height="2339" id="mob_version" marginheight="0" frameborder="0" ></iframe>
+<iframe scrolling="" src="http://ec2-54-229-74-229.eu-west-1.compute.amazonaws.com/git_test/getcontent.php?message_num=<?php $mail_value ?>&mobile_flag=n&just_mobile=y" width="383px" height="2339" id="mob_version" marginheight="0" frameborder="0" ></iframe>
 </div>
 <div id="bottom"><img src="images/iphone_frame_bottom.png"/></div>
 </div>
