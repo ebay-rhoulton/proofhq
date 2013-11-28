@@ -81,7 +81,7 @@ if(isset($_GET['just_mobile'])){
         
         <?php 
 		echo $body; 
-		if(($_GET['mobile_flag']=='y') and ($text_flag == 'n')){ ?>
+		if(($_GET['mobile_flag']=='y') and ($text_flag = 'n')){ ?>
         
         
       <!--Only use for mobile-->
