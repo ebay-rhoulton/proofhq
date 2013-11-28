@@ -38,7 +38,7 @@ imap_alerts();
 	//echo $subject;
 
    //If its a text version then treat it differently
-   if(strrpos($subject_line, "proof|H]")){
+   if(mb_strpos($subject_line, "proof|H]",0,'UTF-8')){
 		$text_flag = 'n';
 		$body = imap_qprint(imap_body($mbox, $mail_value));
       //get and print the body
@@ -46,8 +46,8 @@ imap_alerts();
    }else{
 		
 	   $text_flag = 'y';	
-      $body =  '<pre>' . imap_qprint(imap_body($mbox, $mail_value)) . '</pre>';
-      //$body = nl2br(imap_qprint(imap_body($mbox, $mail_value)));
+      //$body =  '<pre>' . imap_qprint(imap_body($mbox, $mail_value)) . '</pre>';
+      $body = nl2br(imap_qprint(imap_body($mbox, $mail_value)));
    }
    
    //close connection
