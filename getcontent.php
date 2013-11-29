@@ -134,4 +134,4 @@ if(isset($_GET['just_mobile'])){
 <div id="bottom"><img src="images/iphone_frame_bottom.png"/></div>
 </div>
 
-</td></tr><?php } ?></table><?php } //end of is set for just mobile?>
+          </td></tr><?php } ?></table><?php }?>
