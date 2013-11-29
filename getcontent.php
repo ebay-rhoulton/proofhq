@@ -39,16 +39,18 @@ imap_alerts();
 	//Get the mime type
 	$mime_type = imap_fetchstructure($mbox,$mail_value);
    //If its a text version then treat it differently
-   if(($mime_type->subtype<>'PLAIN') OR ($mime_type->subtype<>'TEXT')){
-		$text_flag = 'n';
+   if(($mime_type->subtype=='PLAIN') OR ($mime_type->subtype=='TEXT')){
+  
+  	   $text_flag = 'y';	
+      //$body =  '<pre>' . imap_qprint(imap_body($mbox, $mail_value)) . '</pre>';
+      $body = nl2br(imap_qprint(imap_body($mbox, $mail_value)));
+
+   }else{
+	   
+  		$text_flag = 'n';
 		$body = imap_qprint(imap_body($mbox, $mail_value));
       //get and print the body
 
-   }else{
-		
-	   $text_flag = 'y';	
-      //$body =  '<pre>' . imap_qprint(imap_body($mbox, $mail_value)) . '</pre>';
-      $body = nl2br(imap_qprint(imap_body($mbox, $mail_value)));
    }
    
    //close connection
