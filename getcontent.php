@@ -1,4 +1,6 @@
-<?php
+<?php 
+// this is a new comment
+//and another
 error_reporting(E_ALL);
 ini_set('display_errors','1');
 //Connect to mailbox
