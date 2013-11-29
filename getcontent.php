@@ -36,7 +36,9 @@ imap_alerts();
       }
    }
 	//echo $subject;
+	echo '<pre>';
 	var_dump(imap_fetchstructure($mbox,$mail_value));
+	echo '</pre>';
    //If its a text version then treat it differently
    if(strrpos($subject_line, "proof|H]")){
 		$text_flag = 'n';
