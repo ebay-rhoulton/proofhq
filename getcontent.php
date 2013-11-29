@@ -37,7 +37,8 @@ imap_alerts();
    }
 	//echo $subject;
 	echo '<pre>';
-	var_dump(imap_fetchstructure($mbox,$mail_value));
+	$mime_type = imap_fetchstructure($mbox,$mail_value);
+	var_dump($mime_type->subtype);
 	echo '</pre>';
    //If its a text version then treat it differently
    if(strrpos($subject_line, "proof|H]")){
