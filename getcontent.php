@@ -36,12 +36,10 @@ imap_alerts();
       }
    }
 	//echo $subject;
-	echo '<pre>';
+	//Get the mime type
 	$mime_type = imap_fetchstructure($mbox,$mail_value);
-	echo $mime_type->subtype;
-	echo '</pre>';
    //If its a text version then treat it differently
-   if(strrpos($subject_line, "proof|H]")){
+   if(($mime_type->subtype<>'PLAIN') OR ($mime_type->subtype<>'TEXT')){
 		$text_flag = 'n';
 		$body = imap_qprint(imap_body($mbox, $mail_value));
       //get and print the body
