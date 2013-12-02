@@ -22,17 +22,16 @@ imap_alerts();
    $subject = '';
    //print subject line and convert the string to UTF-8
    for($i=0; $i<count($decoded_header); $i++){
-      // print_r($decoded_header[$i]);
+
       if($decoded_header[$i]->charset=='default'){
 		
-        // echo $decoded_header[$i]->text;
 		
 		$subject = $subject . $decoded_header[$i]->text;
 		
-		
       }else{
-         //echo iconv ($decoded_header[$i]->charset , 'UTF-8' ,$decoded_header[$i]->text);
-		 $subject = $subject . iconv ($decoded_header[$i]->charset , 'UTF-8' ,$decoded_header[$i]->text);
+   
+        $subject = $subject . iconv ($decoded_header[$i]->charset , 'UTF-8' ,$decoded_header[$i]->text);
+        
       }
    }
 	//echo $subject;
