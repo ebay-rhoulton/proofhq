@@ -73,6 +73,4 @@ if(isset($_GET['just_mobile'])){
 
 }
 
-echo $body;
-
 ?>
