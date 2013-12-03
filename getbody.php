@@ -7,9 +7,9 @@ or die("can't connect: " . imap_last_error());
 imap_errors();
 imap_alerts();
 
-if (!isset($_GET['message_num')) {
+/*if (!isset($_GET['message_num')) {
     exit();
-}
+}*/
  $mail_value  = $_GET['message_num'];
    
    //set message as read
