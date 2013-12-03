@@ -72,4 +72,7 @@ if(isset($_GET['just_mobile'])){
    	$body = preg_replace($patterns, $replacements, $body);
 
 }
+
+echo $body;
+
 ?>
