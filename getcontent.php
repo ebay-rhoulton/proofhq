@@ -1,4 +1,5 @@
-<?php include 'getbody.php' ?>
+<?php echo 'im here';
+include 'getbody.php' ?>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
    <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:5px;" bgcolor="#FFFFFF">
    <tr><td>
