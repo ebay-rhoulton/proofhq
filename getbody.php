@@ -1,6 +1,7 @@
 <?php 
 error_reporting(E_ALL);
 ini_set('display_errors','1');
+
 //Connect to mailbox
 $mbox = imap_open("{imap.gmail.com:993/imap/ssl}INBOX", "rupert.edialog@gmail.com", "Elinorco26")
 or die("can't connect: " . imap_last_error());
