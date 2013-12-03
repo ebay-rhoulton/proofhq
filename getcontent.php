@@ -9,9 +9,7 @@
 	<tr>
 		<td style="font-family: Arial, sans-serif; font-size: 17px; line-height: 20px; color: #0064d2; text-decoration: none; border: #0064d2; border-style: solid; border-width: 2px; padding: 5px;"><?php echo $subject; ?></td></tr></table>
         
-        <?php 
-		echo $body; 
-		if(($_GET['mobile_flag']=='y') and ($text_flag == 'n')){ ?>
+        <?php echo $body; /*if(($_GET['mobile_flag']=='y') and ($text_flag == 'n')){ ?>
         
         
       <!--Only use for mobile-->
@@ -26,10 +24,7 @@
   
   <script language="JavaScript">
 
-		/*
-		 * When the iframe is on a different subdomain, uncomment the following line
-		 * and change "example.com" to your domain.
-		 */
+
 		// document.domain = "example.com";
 		function setIframeHeight(iframe) {
 			if (iframe) {
@@ -59,4 +54,4 @@
 <div id="bottom"><img src="images/iphone_frame_bottom.png"/></div>
 </div>
 
-          </td></tr><?php } ?></table><?php }?>
+          </td></tr><?php } ?>*/?></table>
