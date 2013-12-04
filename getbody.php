@@ -5,8 +5,8 @@ ini_set('display_errors','1');
 //Connect to mailbox
 $mbox = imap_open("{imap.gmail.com:993/imap/ssl}INBOX", "rupert.edialog@gmail.com", "Elinorco26")
 or die("can't connect: " . imap_last_error());
-imap_errors();
-imap_alerts();
+/*imap_errors();
+imap_alerts();*/
 
 /*if (!isset($_GET['message_num')) {
     exit();
@@ -51,7 +51,8 @@ imap_alerts();
    }else{
 	   
   		$text_flag = 'n';
-		$body = imap_qprint(imap_body($mbox, $mail_value));
+		//$body = quoted_printable_decode(imap_qprint(imap_body($mbox, $mail_value)));
+                $body = quoted_printable_decode(imap_body($mbox, $mail_value));
       //get and print the body
 
    }
@@ -68,6 +69,6 @@ $replacements = array();
 $replacements[0] = '';
 $replacements[1] = '';
 $replacements[2] = '</style>';
-$mob_body = preg_replace($patterns, $replacements, $body);
+$mob_body = quoted_printable_decode(preg_replace($patterns, $replacements, $body));
 
 ?>
