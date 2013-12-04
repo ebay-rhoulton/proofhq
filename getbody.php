@@ -15,7 +15,7 @@ imap_alerts();
  $proof_version = 1;
    
    //set message as read
-   $status = imap_setflag_full($mbox, $mail_value, "\\Seen \\Flagged");
+   $status = imap_setflag_full($mbox, $mail_value, "\\Seen");
    
    //Get subject line and charset info
    $message_info = imap_fetch_overview($mbox, $mail_value);
