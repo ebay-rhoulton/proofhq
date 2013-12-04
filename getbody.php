@@ -12,6 +12,7 @@ imap_alerts();
     exit();
 }*/
  $mail_value  = $_GET['message_num'];
+ $proof_version = 1;
    
    //set message as read
    $status = imap_setflag_full($mbox, $mail_value, "\\Seen \\Flagged");
