@@ -57,20 +57,16 @@ imap_alerts();
    
    //close connection
 imap_close($mbox);
-
-if(isset($_GET['just_mobile'])){
 	
-	//strip media query then echo
-	$patterns = array();
-	$patterns[0] = '~@media screen and \(max-device-width: [\d]+px\) {~';
-	$patterns[1] = '~@media screen and \(max-width: [\d]+px\) {~';
-	$patterns[2] = '~}[\n\r]+</style>~';
-	$replacements = array();
-	$replacements[0] = '';
-	$replacements[1] = '';
-	$replacements[2] = '</style>';
-   	$body = preg_replace($patterns, $replacements, $body);
-
-}
+//strip media query then echo
+$patterns = array();
+$patterns[0] = '~@media screen and \(max-device-width: [\d]+px\) {~';
+$patterns[1] = '~@media screen and \(max-width: [\d]+px\) {~';
+$patterns[2] = '~}[\n\r]+</style>~';
+$replacements = array();
+$replacements[0] = '';
+$replacements[1] = '';
+$replacements[2] = '</style>';
+$mob_body = preg_replace($patterns, $replacements, $body);
 
 ?>
